@@ -1,0 +1,13 @@
+$green-company: #5eac2d;
+$simple-side: #ffff;
+$dark-side: #252525;
+.modal-form{
+    padding: 15px;
+    .titulo-modal{
+        padding-top: 4px;
+        padding-bottom: 4px;
+        color: $dark-side;
+        font-size: 25px;
+        font-weight: 600;
+    }
+}

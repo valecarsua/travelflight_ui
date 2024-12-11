@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
+
+.breadcrum{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.estado-label {
+    display: flex;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 13px;
+    font-weight: 500;
+    width: 80px;
+    text-align: center;
+    color: white;
+}
+
+.estado-label.activo {
+    background-color: #e6faeb; /* Verde */
+    color: #5eac2d;
+}
+
+.estado-label.activo .indicador {
+    width: 10px;
+    color: #5eac2d;
+    margin-right: 5px;
+}
+
+.estado-label.inactivo {
+    background-color: #fae6e6; /* Verde */
+    color: #ac2d2d;
+}
+
+.estado-label.inactivo .indicador {
+    width: 15px;
+    color: #ac2d2d;
+    margin-right: 5px;
+}
+
