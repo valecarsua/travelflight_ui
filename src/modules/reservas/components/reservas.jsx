@@ -207,14 +207,21 @@ export default function Reservas() {
             });
     
         } catch (error) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: `No se pudo crear: ${error.message}`,
-                timer: 3000,
-                showConfirmButton: false,
+            const Toast = Swal.mixin({
                 toast: true,
-                position: 'top-right',
+                position: "top-right",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                }
+            });
+    
+            Toast.fire({
+                icon: "success",
+                title: "Datos registrados correctamente",
             });
         }
     };
